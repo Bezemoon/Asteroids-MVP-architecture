@@ -1,4 +1,5 @@
-using Asteroids_1._0.Scripts.Ship;
+using Asteroids_LegacyVersion.Scripts.Asteroids;
+using Asteroids_LegacyVersion.Scripts.Ship;
 using UnityEngine;
 
 public class Screen : MonoBehaviour
