@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Asteroids_1._0.Scripts.Ship
+namespace Asteroids_LegacyVersion.Scripts.Ship
 {
     public class Ship : MonoBehaviour
     {
