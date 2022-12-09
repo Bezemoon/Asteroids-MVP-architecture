@@ -25,6 +25,7 @@
 
 # Visual Studio cache directory
 .vs/
+.idea/
 
 # Gradle cache directory
 .gradle/
@@ -69,3 +70,8 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+/[Aa]ssets/Firebase/Plugins/x86_64/FirebaseCppApp-8_3_0.so
+/[Aa]ssets/Firebase/Plugins/x86_64/FirebaseCppApp-9_4_0.bundle
+
+/[Aa]ssets/GLU_Animated_Backgrounds/*
+/[Aa]ssets/EffectExamples/*
