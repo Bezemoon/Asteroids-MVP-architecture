@@ -1,28 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Asteroid))]
-public class AsteroidColissionHandler : MonoBehaviour
+namespace Asteroids_LegacyVersion.Scripts.Asteroids
 {
-    private Asteroid _asteroid;
+    [RequireComponent(typeof(Asteroid))]
+    public class AsteroidColissionHandler : MonoBehaviour
+    {
+        private Asteroid _asteroid;
 
-    private void Awake()
-    {
-        _asteroid = GetComponent<Asteroid>();
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.TryGetComponent(out BlasterBullet blaster))
+        private void Awake()
         {
-            _asteroid.Explode();
-            Destroy(blaster.gameObject);
+            _asteroid = GetComponent<Asteroid>();
         }
-
-        if (collision.gameObject.TryGetComponent(out LaserBullet laser))
+        private void OnTriggerEnter2D(Collider2D collision)
         {
-            _asteroid.IsShare = false;
-            _asteroid.Explode();
+            if (collision.gameObject.TryGetComponent(out BlasterBullet blaster))
+            {
+                _asteroid.Explode();
+                Destroy(blaster.gameObject);
+            }
+
+            if (collision.gameObject.TryGetComponent(out LaserBullet laser))
+            {
+                _asteroid.IsShare = false;
+                _asteroid.Explode();
+            }
         }
     }
 }
